@@ -2,5 +2,4 @@
 A couple of challenges and 2 main projects have been done using html and CSS.
 
 #### The following projects were done as a part of a udemy course Build Responsive Real-World Websites with HTML and CSS
-check out my webpage :
-https:https://omnifood-aashish-kumar.netlify.app
+check out my webpage :https://omnifood-aashish-kumar.netlify.app
