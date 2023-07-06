@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>pagination Component</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        /* Priority font : Inter and Default : sans-serif*/
+        line-height: 1;
+
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+      }
+
+      .container {
+        /* display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        column-gap: 10px; */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      a:link,
+      a:visited {
+        font-size: 20px;
+        background-color: white;
+        color: #444;
+        text-decoration: none;
+        height: 36px;
+        width: 36px;
+
+        /* The icons appear vertically cause flex itself is a block by default this 
+        can be corrected by setting the whole container as flex */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* grid-row: 1/2; */
+      }
+
+      a:hover,
+      a:active,
+      .end-selector.active {
+        background-color: #087f5b;
+        border-radius: 50%;
+        color: white;
+      }
+
+      .btn {
+        height: 48px;
+        width: 48px;
+        background-color: white;
+        border: none;
+        border-radius: 50%;
+        border: 1px solid #087f5b;
+        cursor: pointer;
+        /* grid-row: 1/2; */
+      }
+
+      .btn--left,
+      .btn--right {
+        height: 24px;
+        width: 24px;
+        stroke: #087f5b;
+      }
+
+      .btn:hover,
+      .btn:active {
+        background-color: #087f5b;
+      }
+
+      .btn:hover .hover {
+        stroke: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="hover btn--left"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <!-- end selector used to increase the specificity /priority -->
+      <a href="#" class="end-selector active">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">6</a>
+      <a href="#">...</a>
+      <a href="#">23</a>
+
+      <button class="btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="hover btn--right"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+    </div>
+  </body>
+</html>

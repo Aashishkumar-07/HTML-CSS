@@ -1,0 +1,152 @@
+/* universal selector */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+  background-color: rgb(246, 245, 245);
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+/* combination selector */
+h2,
+h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+h2::after {
+  content: "sale";
+  background-color: red;
+  color: white;
+  padding: 5px 15px;
+  position: absolute;
+  left: -40px;
+  top: -15px;
+  letter-spacing: 5px;
+  font-size: 13px;
+}
+
+/* inheritance */
+/* only text related properties get inherited */
+body {
+  width: 825px;
+  margin: 50px auto;
+  font-family: sans-serif;
+  border: 4px solid black;
+  color: black;
+  line-height: 1.5;
+  position: relative;
+}
+
+button {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  border: none;
+  /* width: 100%; */
+  padding: 10px;
+  width: 100%;
+}
+button:hover {
+  background-color: white;
+  color: black;
+  border-top: 4px solid black;
+}
+
+ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+li {
+  list-style-type: square;
+  margin-bottom: 7px;
+}
+
+/* descendant selector and pseudo class */
+article p:nth-of-type(2) {
+  text-transform: uppercase;
+  color: #777;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* .add_cart {
+    background-color: black;
+    display: block;
+  } */
+
+.amount {
+  font-size: 25px;
+}
+
+a:link,
+a:visited {
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+a:hover,
+a:active {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* creating a color box  */
+
+.box1 {
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  margin: 5px 5px;
+  margin-left: 0px;
+  display: inline-block;
+}
+
+.box2 {
+  background-color: blue;
+  width: 20px;
+  height: 20px;
+  margin: 5px 5px;
+  display: inline-block;
+}
+
+.box3 {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  margin: 5px 5px;
+  display: inline-block;
+}
+
+.box4 {
+  background-color: yellow;
+  width: 20px;
+  height: 20px;
+  margin: 5px 5px;
+  display: inline-block;
+}
+
+.box5 {
+  background-color: greenyellow;
+  width: 20px;
+  height: 20px;
+  margin: 5px 5px;
+  display: inline-block;
+}
+
+.box6 {
+  background-color: brown;
+  width: 20px;
+  height: 20px;
+  margin: 5px 5px;
+  display: inline-block;
+}

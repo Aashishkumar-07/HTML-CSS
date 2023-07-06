@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>table Component</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "inter", sans-serif;
+        /* Priority font : Inter and Default : sans-serif*/
+        color: #343a40;
+        line-height: 1;
+        font-size: 18px;
+      }
+
+      .table {
+        width: 800px;
+        margin: 100px auto;
+      }
+
+      .columns {
+        color: white;
+        background-color: #087f5b;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 16px 20px;
+        font-weight: bold;
+        justify-items: center;
+      }
+
+      .rows {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        display: grid;
+        padding: 16px 20px;
+        justify-items: center;
+      }
+
+      .rows:nth-child(odd) {
+        background-color: #dee2e6;
+      }
+
+      .rows:nth-child(even) {
+        background-color: #fff;
+      }
+
+      .title {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table">
+      <div class="columns">
+        <p>Chair</p>
+        <p>The Laid Back</p>
+        <p>The Worker Bee</p>
+        <p>The Chair 4/2</p>
+      </div>
+      <div class="rows row--1">
+        <p class="title">Width</p>
+        <p>80cm</p>
+        <p>60cm</p>
+        <p>220cm</p>
+      </div>
+      <div class="rows row--2">
+        <p class="title">Height</p>
+        <p>100cm</p>
+        <p>110cm</p>
+        <p>90cm</p>
+      </div>
+      <div class="rows row--3">
+        <p class="title">Depth</p>
+        <p>70cm</p>
+        <p>65cm</p>
+        <p>80cm</p>
+      </div>
+      <div class="rows row--4">
+        <p class="title">Weight</p>
+        <p>16Kg</p>
+        <p>22Kg</p>
+        <p>80Kg</p>
+      </div>
+    </div>
+  </body>
+</html>
